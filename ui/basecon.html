@@ -1,0 +1,348 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+
+		<title>Video Background</title>
+
+
+		<style type="text/css">
+
+			
+
+			* {
+
+				margin: 0;
+
+				padding: 0;
+
+			}
+
+			body {
+
+				font-family: "comic Sans MS";
+
+			}
+
+			.background-wrap {
+
+				position: fixed;
+
+				z-index: -1000;
+
+				width: 100%;
+
+				height: 100%;
+
+				overflow: hidden;
+
+				top: 0;
+
+				left: 0;
+
+			}
+
+			
+
+			#video-bg-elem {
+
+				position: absolute;
+
+				top: 0;
+
+				left: 0;
+
+				min-height: 100%;
+
+				min-width: 100%;
+
+			}
+
+			.content {
+
+				position: absolute;
+
+				width: 100%;
+
+				min-height: 100%;
+
+				z-index: 1000;
+
+				background-color: rgba(0,0,0,0.7);
+
+			}
+
+			.content h1 {
+
+				text-align: center;
+
+				font-size: 75px;
+
+				text-transform: uppercase;
+
+				font-weight: 300;
+
+				color: #fff;
+
+				padding-top: 15%;
+
+				margin-bottom: 10px;
+
+			}
+			.content h2 {
+
+				text-align: center;
+
+				font-size: 50px;
+
+				text-transform: uppercase;
+
+				font-weight: 150;
+
+				color: #fff;
+
+				padding-top: 5%;
+
+				margin-bottom: 7px;
+
+			}
+
+
+			.content p {
+
+				text-align: center;
+
+				font-size: 30px;
+
+				letter-spacing: 3px;
+
+				color: #aaa;
+
+			}
+			.content a {
+
+				text-align: center;
+
+				font-size: 40px;
+
+				letter-spacing: 3px;
+
+				color: #aaa;
+				
+				padding-left:50px;
+				
+				padding-right:50px;
+				
+				padding-top:40px;
+
+			}
+			a  
+			{  
+			 text-decoration:none;  
+			}  
+			button
+			 {
+						background-color:#44c767;
+						-moz-border-radius:20px;
+						-webkit-border-radius:20px;
+						border-radius:20px;
+						border:1px solid #18ab29;
+						display:inline-block;
+						cursor:pointer;
+						color:#ffffff;
+						font-family:Arial;
+						font-size:17px;
+						padding:16px 31px;
+						text-decoration:none;
+						text-shadow:0px 1px 0px #2f6627;
+			}
+			button:hover 
+			{
+					background-color:#5cbf2a;
+			}
+			button:active 
+			{
+						position:relative;
+						top:1px;
+			}
+			input
+			 {
+				background-color: rgba(0,0,0,0.1);
+				border-color:#FAFAFA;
+				font-size:20px;
+				font-family:"comic Sans MS";
+				color:#FAFAFA;
+				border-spacing:10px;
+				padding-left:5px;
+				padding-right:5px;
+				
+			}
+			
+			#ans
+			{
+			
+				background-color: rgba(0,0,0,0.1);
+				border-color:#FAFAFA;
+				font-size:20px;
+				font-family:"comic Sans MS";
+				color:#FAFAFA;
+			
+			}
+			#bch
+			{
+				text-align: center;
+
+				font-size: 75px;
+
+				text-transform: uppercase;
+
+				font-weight: 300;
+
+				color: #fff;
+
+				padding-top: 1%;
+
+				margin-bottom: 10px;
+			}
+
+		</style>
+		<script type="text/javascript">
+		var num,base;
+		
+		function valid()
+		{
+			alert("valid funciton caled");
+			 num=document.getElementById("que").value;
+			 base=document.getElementById("base").value;
+			var ck=isNaN(num);
+			var ck1=isNaN(base);
+			if(ck1=='true')
+			{
+				alert("please provide only numbers");
+			}
+			if(ck=="true")
+			{
+				alert("please provide numbers only");
+			}
+			if(base>26)
+			{
+				alert("Sorry we are it works only for base up to 26!");
+			}
+			else
+			{
+				convert();
+			}
+		}
+		function convert()
+		{
+			alert("convert function called");
+			var a=[];
+			var i,j=0,k,q,r;
+			for(i=num;num>=base;)
+			{
+				alert("for loop");
+				r=num%base;
+				num=num/base;
+				num=parseInt(num);
+				
+				if(r>9)
+				{
+					var m=r-9;
+					if(m<=26)
+					{
+						a[j]=String.fromCharCode(64+m);
+						j++;
+					}
+				}
+				else
+				{
+					a[j]=r;
+					j++;
+				}
+			}
+			if(num<base)
+			{
+				if(num>9)
+				{
+					var re=num-9;
+					if(re<=26)
+					{
+						var f=64+re;
+						f=String.fromCharCode(f);
+						a[j]=f;
+						j++;
+					}
+				}
+				else
+				{
+					a[j]=num;
+					j++;
+				}
+			}
+			a=a.reverse();
+			var res=a.join("");
+			alert(res);
+			document.getElementById("ans").value=res;
+			
+		}
+		
+			
+		</script>
+	</head>
+
+	<body>
+	
+	
+
+
+
+
+
+
+		<div class="background-wrap">
+
+			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop"  > 
+
+				<source src="bg1.mp4" type="video/mp4">
+
+				Video not supported
+
+			</video> 
+		<!--	<audio id="audio-bg-elem" preload="auto" autoplay="true" loop="loop" > 
+
+				<source src="Try Everything - Shakira (Zootopia)(mp3rule.com).mp3" type="audio/mp3">
+
+				Video not supported
+
+			</audio> -->
+
+		</div>
+
+
+
+		<div class="content"> 
+
+			<h1 align="center">SMART SOFT</h1>
+			<h2 align="center">Base converter</h2>
+			<br>
+			<a href="#bch"><p align="center"><button>Go To Converter</button></p></a>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+			<h1 id="bch">Base Converter</h1><br><br>
+
+			<p><label>Enter Number:</label><input id="que" type="text" pattern="[0-9]"/></p>
+			<br>
+			<p><label>Enter Base:</label><input id="base" type="text"/></p><br><br />
+			<p><button onClick="valid()">Convert</button></p>
+			<h2>Answer</h2>
+			<p><input type="text" id="ans" disabled="disabled" /></p><br><br><br><br>
+
+			
+			
+			
+		</div>
+
+	</body>
+
+</html>
+
