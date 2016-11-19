@@ -12,8 +12,9 @@ app.get('/', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
-
-
+app.get('/ui/sslogo1.gif', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'sslogo1.gif'));
+});
 app.get('/ui/bg1.mp4', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg1.mp4'));
 });
