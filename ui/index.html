@@ -211,23 +211,22 @@
 		
 		function valid()
 		{
-		//	alert("valid funciton caled");
+		
+			
+			//alert("valid funciton caled");
 			 num=document.getElementById("que").value;
 			 base=document.getElementById("base").value;
-			var ck=isNaN(num);
-			var ck1=isNaN(base);
-			if(ck1=='true')
+		//	var ck=isNaN(num);
+		//	var ck1=isNaN(base);
+			if(isNaN(num) || isNaN(base))
 			{
 				alert("please provide only numbers");
-			}
-			if(ck=="true")
-			{
-				alert("please provide numbers only");
+				
 			}
 			if(base>26)
-			{
-				alert("Sorry we are it works only for base up to 26!");
-			}
+				{
+					alert("Sorry it work's up to base 26!");
+				}
 			else
 			{
 				convert();
