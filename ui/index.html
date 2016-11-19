@@ -234,12 +234,12 @@
 		}
 		function convert()
 		{
-		//	alert("convert function called");
+		
+			//alert("convert function called");
 			var a=[];
 			var i,j=0,k,q,r;
-			for(i=num;num>=base;)
+			if(num>9&& num<20)
 			{
-			//	alert("for loop");
 				r=num%base;
 				num=num/base;
 				num=parseInt(num);
@@ -249,6 +249,7 @@
 					var m=r-9;
 					if(m<=26)
 					{
+					 //alert("doubt");
 						a[j]=String.fromCharCode(64+m);
 						j++;
 					}
@@ -259,13 +260,41 @@
 					j++;
 				}
 			}
+			while(num>=base)
+			{
+				//alert("for loop");
+				r=num%base;
+				num=num/base;
+				num=parseInt(num);
+				
+				if(r>9)
+				{
+					var m=r-9;
+					if(m<=26)
+					{
+					 alert("doubt");
+						a[j]=String.fromCharCode(64+m);
+						j++;
+					}
+				}
+				else
+				{
+					a[j]=r;
+					j++;
+				}
+			}
+			//alert("before conditon"+num);
+			//alert("before conditon"+base);
 			if(num<base)
 			{
+			//alert(base);
+			//alert(num);
 				if(num>9)
 				{
 					var re=num-9;
 					if(re<=26)
 					{
+						alert("doubt2");
 						var f=64+re;
 						f=String.fromCharCode(f);
 						a[j]=f;
