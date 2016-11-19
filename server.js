@@ -14,7 +14,7 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 
-app.get('/ui/style.css', function (req, res) {
+app.get('/ui/index.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg1.mp4'));
 });
 
