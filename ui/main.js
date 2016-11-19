@@ -2,7 +2,7 @@ var num,base;
 		
 		function valid()
 		{
-			//alert("valid funciton caled");
+			alert("valid funciton caled");
 			 num=document.getElementById("que").value;
 			 base=document.getElementById("base").value;
 		//	var ck=isNaN(num);
@@ -23,12 +23,12 @@ var num,base;
 		}
 		function convert()
 		{
-			//alert("convert function called");
+			alert("convert function called");
 			var a=[];
 			var i,j=0,k,q,r;
 			for(i=num;num>=base;)
 			{
-				//alert("for loop");
+				alert("for loop");
 				r=num%base;
 				num=num/base;
 				num=parseInt(num);
