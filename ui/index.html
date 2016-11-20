@@ -209,7 +209,8 @@
 
 		</style>
 		<script type="text/javascript">
-		var num,base;
+		var num;
+		var base;
 		
 		function valid()
 		{
@@ -218,6 +219,8 @@
 			//alert("valid funciton caled");
 			 num=document.getElementById("que").value;
 			 base=document.getElementById("base").value;
+			 num=parseInt(num);
+			 base=parseInt(base);
 		//	var ck=isNaN(num);
 		//	var ck1=isNaN(base);
 			if(isNaN(num) || isNaN(base))
@@ -240,28 +243,7 @@
 			//alert("convert function called");
 			var a=[];
 			var i,j=0,k,q,r;
-			if(num>9&& num<20)
-			{
-				r=num%base;
-				num=num/base;
-				num=parseInt(num);
-				
-				if(r>9)
-				{
-					var m=r-9;
-					if(m<=26)
-					{
-					 //alert("doubt");
-						a[j]=String.fromCharCode(64+m);
-						j++;
-					}
-				}
-				else
-				{
-					a[j]=r;
-					j++;
-				}
-			}
+			
 			while(num>=base)
 			{
 				//alert("for loop");
