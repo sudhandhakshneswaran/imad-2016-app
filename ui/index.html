@@ -242,8 +242,11 @@
 		
 			//alert("convert function called");
 			var a=[];
+			var res=123;
 			var i,j=0,k,q,r;
-			
+		
+			if(num<0);
+			if(base<0);
 			while(num>=base)
 			{
 				//alert("for loop");
@@ -269,7 +272,7 @@
 			}
 			//alert("before conditon"+num);
 			//alert("before conditon"+base);
-			if(num<base)
+			if(num < base)
 			{
 			//alert(base);
 			//alert(num);
@@ -278,7 +281,7 @@
 					var re=num-9;
 					if(re<=26)
 					{
-					//	alert("doubt2");
+						//alert("doubt2");
 						var f=64+re;
 						f=String.fromCharCode(f);
 						a[j]=f;
@@ -291,8 +294,9 @@
 					j++;
 				}
 			}
+			
 			a=a.reverse();
-			var res=a.join("");
+			res=a.join("");
 			//alert(res);
 			document.getElementById("ans").value=res;
 			
