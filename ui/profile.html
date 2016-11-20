@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	font-family:"comic Sans MS";
+	background-color:#CD7ADE;
+}
+p
+{
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+}
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    clear: left;
+    text-align: center;
+	font-weight:300;
+	font-family:"comic Sans MS";
+}
+
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+#image
+	{
+		border-radius: 150px;
+		background-color:#CD7ADE;/*#73AD21;#0099FF;*/
+		padding: 3px;
+		width: 155px;
+		height: 150px;
+		text-align:left;
+	}
+	ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+
+ul.tab li {float: left;}
+
+ul.tab li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+ul.tab li a:hover {
+    background-color: #ddd;
+}
+
+ul.tab li a:focus, .active {
+    background-color: #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+<script>
+function opencont(evt, cityName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+	}
+/*	document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("default_city_link").click();
+}*/
+</script>
+</head>
+<body>
+
+<div class="container">
+
+<header>
+   <h1>PROFILE</h1>
+   <img id="image" src="myphoto.jpg">
+   <p>V. SUDHAN DHAKSHNESWARAN</p>
+</header>
+  
+<ul class="tab">
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'Personal Details')">Personal Details</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'Education')">Education</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'Skills')">Skills</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'Project')">Project</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'Interest')">Interest</a></li>
+  <li><a href="javascript:void(0)" class="tablinks" onClick="opencont(event, 'About Me')">About Me</a></li>
+</ul>
+<div id="Personal Details" class="tabcontent">
+  <h2>Personal Details</h2>
+  <strong> <pre>
+ <p>
+ 	Name		:	V.Sudhan Dhakshneswaran
+	
+ 	Age			: 	21
+	
+ 	D.O.B		:	27 MAY 1995
+	
+ 	Sex			: 	Male
+	
+ 	Address		: 	21a/10a, second main road,vengadeshwara nagar,<br>					velacherry, chennai-600042.</p></pre></strong>
+</div>
+
+<div id="Education" class="tabcontent">
+  <h3>Education</h3>
+  <strong><pre><p>
+  		Education									School/College								Grade/Cgpa						Year
+   
+   		   X									Nadar Saraswathi boys school,Theni							85%						2010
+		   
+		   XII								Mary Matha hr. sec. school, Theni							78.16%						2012
+		   
+		   B.Sc								Loyola college, Chennai									7.2							2015
+		   
+		   MCA								College Of Engineering Guindy, Chennai					9.32(till 2nd sem)					2018
+  </p></pre></strong>
+</div>
+
+<div id="Skills" class="tabcontent">
+  <h3>Skills</h3>
+  <strong><pre><p>
+ 			Skill									Year of working
+			
+			Java										1-2 
+			
+			C											3+
+			
+			C++											3+
+			
+			HTML										3+
+			
+			Javascript									1
+			
+			Android										1
+			
+			Ms office										5+
+			
+			CSS											1
+			
+			Flash, Animate								1-2
+			
+			Photoshop									1
+			
+  </p></pre></strong>
+</div>
+<div id="Project" class="tabcontent">
+  <h3>Projects</h3>
+  <strong><pre><p>
+  
+  Automatic Water Tank Moniter
+  			
+				This is about automaticly turn motor on and off depends up on the water level in the tank. The speciallity of this project. 
+				It will turn on motor once the water level reaches very low. Other projects similar to this are turn on motor once the water 
+				level is lowver then the maimum and that's why it will turn on motor frequently but this project over come that trouble.
+				
+  Soil Conservation
+  
+  				This is basically a compatetion conduted by "Tamil Nadu Science Forum". It all about the soil conservation. I am in a group of 
+				5 lead by me. We did a research for around 7 months with different type of soil and plants with natural and chemical fertilizers
+				and come up with a result that natural fertilizers have better productivity then chemical. And our research project got 1st price in 
+				District level and we are runner up in State Level.
+				
+  Hi-Fi A/C controller
+  
+  				I done this project during my 3rd semeter of MCA. I use LM85 temperature sensor for detecting room temperatur. If the room temperature 
+				is higher then normal it will automaitcally turn on A/C and close the door and turn on LED which indicates that the Room temperature is
+				higher then usual temperature. And it will turn off the A/C once the temperature back to normal.
+				
+  Base Converter
+  
+  				The project you just look at before this page. And the speciallity of this project is you can convert a decimal to any base upto 35.
+				And this is very usefull when you try to encode and decode when tranfering sensitive content over Internet. I am planning to do it bit
+				larger in comming months.
+  </p></pre></strong>
+</div>
+<div id="Interest" class="tabcontent">
+  <h3>Interest</h3>
+<strong><pre><p>
+			>	Programming
+			
+			>    	Logical problem solving
+			
+			> 	Research activities
+			
+			>	Foot Ball
+			
+			>   	 Poem writing(Tamil)
+			
+			>	Photo Editing
+			
+			>	Cooking and Eating
+			
+			> 	Developing myself by put me into a critical situation
+</p></pre></strong>
+</div>
+<div id="About Me" class="tabcontent">
+  <h3>About Me</h3>
+<strong><pre><p>
+				A normal student from College of Engineering Guindy(CEG) with the tag of MCA. And have some Knowledge in programming and good in logical problem solving
+		searching for the cahllenging and usefull internship/projects to develop myself from that experience I gain from that.
+				
+				The most interesting about me is "I am not a Hard Worker, But a Smart Worker". I have some good Leader Ship Experience wich are Troup Leader for Bharath Scout
+		for about 3 Years. "Health Team Leader" during my outreach program in Under Graduation.
+		
+									My positives 														My Negatives													
+								
+								> 	charming													>	Don't like when someone Don't keep their workds
+								
+								>	Responsible													>	won't bother about the reslut and trying everything
+								
+								>	Flexable Enough to work as a group								>	Forget Everything when I am in my Work
+								
+								> 	Interested in new things										>	Easly got irritate when some one disturbing me while working
+								
+								> 	Eager to solve Problems											
+								
+								->	Respect Everyone
+</p></pre></strong>
+</div>
+<!--<article>
+  <h1>Personal Details</h1>
+<strong> <pre>
+ <p>Name		:	V.Sudhan Dhakshneswaran</p>
+ <p>Age		: 	21</p>
+ <p>D.O.B		:	27 MAY 1995</p>
+ <P>Sex		: 	Male</P>
+ <p>Address		: 	21a/10a, second main road,vengadeshwara nagar,<br>			velacherry, chennai-600042.</p></pre></strong>
+</article>
+<article>
+<h1>Education</h1>
+<strong>
+<table>
+<tr>
+<th> Degree</th>
+<th>School/College</th>
+<th>Grade/CGPA</th>
+</tr>
+</table>
+</strong>-->
+
+
+<footer>
+<pre><div id="phoneno" style="text-align:left">Mobile: 8508547323</div><div id="email" style="text-align:right">E-mail:  sudhandhakshneswaran@gmail.com<br />sudhandhakshneswaran279@gmail.com</div></pre>
+</footer>
+
+</div>
+
+</body>
+</html>
+
