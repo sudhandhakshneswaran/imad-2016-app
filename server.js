@@ -18,7 +18,12 @@ app.get('/ui/sslogo1.gif', function (req, res) {
 app.get('/ui/bg1.mp4', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg1.mp4'));
 });
-
+app.get('/ui/profile.html', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
+});
+app.get('/ui/myphoto.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'myphoto.jpg'));
+});
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
