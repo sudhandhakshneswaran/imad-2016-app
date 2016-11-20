@@ -225,7 +225,7 @@
 				alert("please provide only numbers");
 				
 			}
-			if(base>26)
+			if(base>26|| isNaN(num)||isNaN(base))
 				{
 					alert("Sorry it work's up to base 26!");
 				}
@@ -274,7 +274,7 @@
 					var m=r-9;
 					if(m<=26)
 					{
-					 alert("doubt");
+					// alert("doubt");
 						a[j]=String.fromCharCode(64+m);
 						j++;
 					}
@@ -296,7 +296,7 @@
 					var re=num-9;
 					if(re<=26)
 					{
-						alert("doubt2");
+					//	alert("doubt2");
 						var f=64+re;
 						f=String.fromCharCode(f);
 						a[j]=f;
